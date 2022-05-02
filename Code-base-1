@@ -1,0 +1,58 @@
+Code to add 
+
+<!-- Add to Page Head Markup -->
+
+<style type="text/css">
+
+ .course-1, .course-2, .course-3 {
+
+   display:none;
+
+  }
+
+</style>
+
+
+
+Additional Code to Add
+
+<!-- Add to Page Body Markup -->
+
+<script>
+
+  if (typeof WebPlatform.Members.current !== "undefined") {
+
+    
+
+      let memberships = WebPlatform.Members.current.groupIds
+
+      
+
+      if (memberships.indexOf(1) != -1) { // Where 1 is the membership group id 
+
+        $(".course-1").show();
+
+      }
+
+      if (memberships.indexOf(2) != -1) { // Where 2 is the membership group id 
+
+        $(".course-2").show();
+
+      }
+
+      if (memberships.indexOf(3) != -1) { // Where 3 is the membership group id 
+
+        $(".course-3").show();
+
+      }
+
+      if (memberships.indexOf(4) != -1) { // Where 4 is the membership group id 
+
+        $(".course-1, .course-2, .course-3").show();
+
+      }
+
+  }
+
+</script>
+
